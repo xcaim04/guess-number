@@ -5,7 +5,7 @@ function getRandomArbitrary(min, max) {
 }
 
 
-const secrectNumber = getRandomArbitrary(1, 20);
+let secrectNumber = getRandomArbitrary(1, 20);
 let flag = false;
 
 const number = document.querySelector('.number');
@@ -21,6 +21,7 @@ function reset() {
   score.textContent = 5;
   flag = false;
   message.textContent = 'Start guessing...';
+  secrectNumber = getRandomArbitrary(1, 20);
 }
 
 const check = document.querySelector('.check').addEventListener('click', () => {
